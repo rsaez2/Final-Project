@@ -18,4 +18,8 @@ document.querySelector('form').addEventListener("submit",function(){
     ul.innerHTML = list.join('');
 })
 
-document.querySelector()
+document.querySelector('section').addEventListener("checkbox",function(){
+    if(checked){
+        <p class= "line"> ${todoarry}</p>
+    }
+})
