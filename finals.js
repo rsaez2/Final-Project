@@ -11,15 +11,12 @@ document.querySelector('form').addEventListener("submit",function(){
     const list = todoarrys.map(todoarry => `
     <li>
     <p> ${todoarry}</p>
-    <input type="checkbox" id= "completed">
-    <button value="x">x</button>
+    <input type="checkbox">
+    <button class= "delete">x</button>
     </li>
     `);
     ul.innerHTML = list.join('');
 })
 
-document.querySelector('section').addEventListener("checkbox",function(){
-    if(checked){
-        <p class= "line"> ${todoarry}</p>
-    }
-})
+const clear = document.querySelector("button.delete");
+const check = document.querySelector("checkbox");
