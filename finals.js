@@ -11,7 +11,11 @@ document.querySelector('form').addEventListener("submit",function(){
     const list = todoarrys.map(todoarry => `
     <li>
     <p> ${todoarry}</p>
+    <input type="checkbox" id= "completed">
+    <button value="x">x</button>
     </li>
     `);
     ul.innerHTML = list.join('');
 })
+
+document.querySelector()
