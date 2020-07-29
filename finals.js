@@ -19,7 +19,32 @@ document.querySelector('form').addEventListener("submit",function(){
     ul.innerHTML = list.join('');
 })
 
+const checkbox = document.querySelector('.checked');
+const style = document.querySelector('style')
+const subbutt = document.querySelector(".extra")
+const clear = document.querySelector("button.clear");
+var boo = 0
 
+checkbox.addEventListener('click', function(){
+    if(check.checked){
+        boo = 1
+    } else{
+        boo = 0
+    }
+})
+subbutt.addEventListener('click', function(cTB){
+    if(boo = 1){
+        const line = `
+            <style>
+                label.line{
+                    text-decoration-line: line-through = true
+                }
+            </style>
+        `
+        style.innerHTML = line;
+    }else{
+
+    }
 
 })
 
