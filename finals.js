@@ -12,45 +12,50 @@ document.querySelector('form').addEventListener("submit",function(){
     <li>
     <input type="checkbox" class= "checked">
     <lable for= "checked"> <a class= "line">${todoarry}</a></lable>
-    <button class= "clear">x</button>
-    <button type= "submit" class= "extra">Submit</button>
+    <button type="submit" id= "clear">x</button>
     </li>
     `);
     ul.innerHTML = list.join('');
 })
 
-const checkbox = document.querySelector('.checked');
-const style = document.querySelector('style')
-const subbutt = document.querySelector(".extra")
-const clear = document.querySelector("button.clear");
+const cb = document.querySelector('.checked');
+const style = document.createElement('style')
+const head = document.querySelector('head')
+const clear = document.querySelector("#clear");
 var boo = 0
 
-checkbox.addEventListener('click', function(){
+cb.addEventListener("click", function(event){
+    console.log(event);
     if(check.checked){
-        boo = 1
+        boo === true
     } else{
-        boo = 0
+        boo === false
     }
 })
-subbutt.addEventListener('click', function(cTB){
-    if(boo = 1){
+if(boo === true){
         const line = `
             <style>
-                label.line{
-                    text-decoration-line: line-through = true
+                a.line{
+                    text-decoration: line-through = true
+                    
                 }
             </style>
         `
-        style.innerHTML = line;
+        head.innerHTML = line;
     }else{
 
-    }
+     }
 
-})
-
-clear.addEventListener('click', function(){
+clear.addEventListener("submit", function(event){
         event.preventDefault();
-        delete todoarray[1]
+    const gone =`
+        <style>
+            a.line{
+                visibility: hidden
+            }
+        </style>
+    `
+    style.innerHTML = gone;
 })
 
 
