@@ -10,27 +10,22 @@ document.querySelector('form').addEventListener("submit",function(){
     todoarrys.push(todo)
     const list = todoarrys.map(todoarry => `
     <li>
-    <input type="checkbox" class= "checked>
-    <p for= "checkbox"> ${todoarry} </p>
+    <input type="checkbox" class= "checked">
+    <lable for= "checked"> <a class= "line">${todoarry}</a></lable>
     <button class= "clear">x</button>
+    <button type= "submit" class= "extra">Submit</button>
     </li>
     `);
     ul.innerHTML = list.join('');
 })
 
-const clear = document.querySelector("button.delete");
-const check = document.querySelector("checkbox");
-const line = document.querySelector(".line")
-const li = document.querySelector("li")
 
-li.addEventListener("click", function(rTC){
-    if(rTC.target.input === check){
-        rTC.target.classList.toggle('checked'); 
-    }  
-}, false);
 
-function dlt() {
-    todoarray.splice(index, 1)
-}
+})
+
+clear.addEventListener('click', function(){
+        event.preventDefault();
+        delete todoarray[1]
+})
 
 
