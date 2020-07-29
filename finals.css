@@ -1,7 +1,11 @@
-input.checkbox.checked{
+p input.checkbox.checked{
   text-decoration: line-through;  
 }
 
 p{
     color: red;
+}
+
+title{
+    color: blue;
 }
